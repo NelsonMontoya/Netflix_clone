@@ -1,0 +1,19 @@
+div {
+  display: block;
+}
+.netflix-header {
+  height: 70px;
+}
+
+.netflix-header-container {
+  top: 0px;
+  position: relative;
+  background: transparent;
+}
+
+.netflix-header,
+.netflix-header-container {
+  left: 0;
+  right: 0;
+  z-index: 1;
+}

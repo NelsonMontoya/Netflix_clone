@@ -1,30 +1,29 @@
-import Row from "./modules/Row";
-import requests from "./requests";
+import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import './App.css'
+import Home from './pages/Home';
+import Browse from './pages/Browse';
 
 function App() {
   return (
-    <div className="App">
-      <Row 
-          title = 'Netflix Originals' 
-          url ={requests.netflixOrginals}
-      />
-      <Row 
-          title = 'Trending Now'
-          url ={requests.trendingMovies}
-      />
-      <Row 
-          title = 'Top Rated'
-          url ={requests.topRated}
-      />
-      <Row 
-          title = 'Action Movies'
-          url ={requests.actionMovies}
-      />
-      <Row 
-          title = 'Horror Movies'
-          url ={requests.horrorMovies}
-      />
-    </div>
+    <Router>
+      <div className="App">
+
+        <Route
+          exact
+          path="/"
+          component ={Home}
+        />
+
+        <Route
+          exact
+          path = "/browse"
+          component ={Browse}
+        />
+
+        
+      </div>
+    </Router>
   );
 }
 

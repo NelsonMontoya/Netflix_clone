@@ -1,0 +1,148 @@
+.appMountPoint {
+  background-color: #000;
+}
+
+div {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container-wrapper {
+  background-color: transparent;
+  transition: background-color 0.5s;
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1449px) {
+  .container-wrapper {
+    height: 4rem;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 949px),
+  only screen and (min-width: 400px) and (max-width: 549px),
+  only screen and (min-width: 350px) and (max-width: 399px),
+  only screen and (max-width: 349px) {
+  .container-wrapper {
+    height: 45px;
+  }
+}
+
+.header {
+  display: flex;
+  /* flex-flow: row nowrap; */
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+  position: relative;
+  margin: 0 3.5rem;
+  /* height: 100%; */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+}
+.header,
+.story-logo {
+  margin-right: auto;
+}
+@media only screen and (min-width: 400px) and (max-width: 549px),
+  only screen and (min-width: 350px) and (max-width: 399px),
+  only screen and (max-width: 349px) {
+  .header {
+    margin: 0 5%;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 949px) {
+  .header {
+    margin: 0 45px;
+  }
+}
+
+.nfLogo {
+  fill: #e50914;
+  line-height: normal;
+}
+
+.language-container-selection {
+  display: inline-block;
+  margin: 0.75rem;
+}
+
+@media only screen and (min-width: 550px) and (max-width: 949px) {
+  .language-container-selection {
+    margin-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1449px),
+  only screen and (min-width: 1450px) {
+  .language-container-selection {
+    margin-right: 2rem;
+  }
+}
+
+.ui-select-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.ui-select-wrapper,
+.language-container-selection {
+  width: auto;
+}
+
+.ui-label {
+  font-weight: 400;
+  color: #8c8c8c;
+  display: block;
+  font-size: 13px;
+}
+
+.language-container-selection,
+.ui-label {
+  display: block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 549px),
+  only screen and (min-width: 350px) and (max-width: 399px),
+  only screen and (max-width: 349px) {
+  .nfLogo .svg-icon-netflix-logo {
+    height: 24px;
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1449px) {
+  .nfLogo .svg-icon-netflix-logo {
+    width: 8.375rem;
+    height: 2.25rem;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 949px) {
+  .nfLogo .svg-icon-netflix-logo {
+    width: 6.75rem;
+    height: 2rem;
+  }
+}

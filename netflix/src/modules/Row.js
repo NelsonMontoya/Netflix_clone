@@ -7,13 +7,13 @@ const base_url = 'https://image.tmdb.org/t/p/original/';
 
 function Row({title, url}) {
     /*Initially there are not movies in the state */
-    const [movies, setMovies] = useState([]);
+    const [data, setData] = useState([]);
 
     useEffect(()=>{
-        // if [], run once the Row loads, adn don't run again
+        // if [], run once the Row loads, and don't run again
         async function getMovies(){
             const response = await axios.get(url);
-            setMovies(response.data.results);
+            setData(response.data.results);
             return response;
         }
 
@@ -21,12 +21,13 @@ function Row({title, url}) {
 
     },[url]); // if url changes, and it does because the url is not the same for every genre
 
-    console.log(movies);
+
+    console.log(data);
     return (
         <div className = "row">
             <h2>{title}</h2>
             <div className="row_posters">
-                {movies.map(movie=>(
+                {data.map(movie=>(
                     <img
                         key = {movie.id}
                         className = "movie_picture"
