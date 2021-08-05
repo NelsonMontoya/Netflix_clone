@@ -20,8 +20,6 @@ function App() {
           path = "/browse"
           component ={Browse}
         />
-
-        
       </div>
     </Router>
   );

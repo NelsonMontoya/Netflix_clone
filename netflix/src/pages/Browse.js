@@ -1,12 +1,12 @@
 import React from 'react';
 import Row from '../modules/Row';
 import requests from '../requests';
-import Header from '../modules/Header';
+import Header from '../modules/components/header/Header';
 
 function Browse() {
     return (
         <div>
-        <Header />
+        
             <Row 
                 title = 'Netflix Originals' 
                 url ={requests.netflixOrginals}
